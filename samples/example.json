@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "title": "Three quiet challenges",
+  "levels": [
+    {
+      "name": "Corners",
+      "size": 3,
+      "mode": "pattern",
+      "tiles": [
+        0,
+        2,
+        6,
+        8
+      ]
+    },
+    {
+      "name": "Across the grid",
+      "size": 3,
+      "mode": "sequence",
+      "tiles": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "name": "Think backwards",
+      "size": 3,
+      "mode": "reverse",
+      "tiles": [
+        1,
+        4,
+        7
+      ]
+    }
+  ]
+}

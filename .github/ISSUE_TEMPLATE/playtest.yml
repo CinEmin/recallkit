@@ -1,0 +1,29 @@
+name: Prototype playtest
+description: Report your authoring/export experience (public, no private data)
+title: "Playtest: "
+body:
+  - type: markdown
+    attributes:
+      value: "Create two levels, save JSON, export playable HTML, then open the exported file. Reports are public; omit names, private content and files. Participation is optional."
+  - type: dropdown
+    id: result
+    attributes:
+      label: Task outcome
+      options:
+        - Completed without assistance
+        - Completed with assistance
+        - Could not complete
+    validations:
+      required: true
+  - type: textarea
+    id: friction
+    attributes:
+      label: Where did you get stuck?
+      description: Include browser and approximate time if you want. No personal data needed.
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: What would you otherwise use?
+      description: Describe the activity you wanted to create and your current alternative. Do not share client or confidential content.

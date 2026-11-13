@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RecallKit activity</title><style>*{box-sizing:border-box}body{margin:0;background:#f3f1ea;color:#183b34;font:16px system-ui,sans-serif}main{max-width:560px;margin:40px auto;padding:24px}h1,h2,p{overflow-wrap:anywhere}h1{font-size:30px}h2{font-size:23px}.eyebrow{letter-spacing:.12em;font-size:12px}.play-grid{display:grid;gap:8px;margin:24px 0}.tile{aspect-ratio:1;border:1px solid #b8c8bf;border-radius:12px;background:#e3ebe5;color:#1d4c3e;font-size:20px;min-width:0;padding:0}.tile.selected{background:#1d5946;color:white}.tile:disabled{opacity:1}button{cursor:pointer;font:inherit;min-height:44px}button:focus-visible{outline:3px solid #c57d21;outline-offset:3px}.primary{background:#1d5946;color:white;border:0;padding:13px 22px;border-radius:10px}</style></head><body><main id="player"></main><script type="application/json" id="pack-data">{"version":1,"title":"Three quiet challenges","levels":[{"name":"Corners","size":3,"mode":"pattern","tiles":[0,2,6,8]},{"name":"Across the grid","size":3,"mode":"sequence","tiles":[0,4,8]},{"name":"Think backwards","size":3,"mode":"reverse","tiles":[1,4,7]}]}</script><script>(function mountPlayer(host, pack, match) {
+    let index=0, phase='ready', entered=[];
+    const el=(tag,text,cls)=>{const e=document.createElement(tag);if(text)e.textContent=text;if(cls)e.className=cls;return e;};
+    host.replaceChildren();
+    const title=el('h1',pack.title), progress=el('p','','eyebrow'), name=el('h2'), instructions=el('p'), status=el('p'), grid=el('div','','play-grid'), action=el('button','Show pattern','primary');
+    status.setAttribute('role','status'); status.setAttribute('aria-live','polite'); action.id='player-action';grid.id='player-grid';
+    host.append(title,progress,name,instructions,status,grid,action);
+    function render(){
+      const l=pack.levels[index];progress.textContent='LEVEL '+(index+1)+' / '+pack.levels.length;name.textContent=l.name;
+      instructions.textContent=l.mode==='pattern'?'Remember the highlighted tiles. Choose them in any order.':l.mode==='sequence'?'Remember the numbered tiles. Repeat their order.':'Remember the numbered tiles. Repeat in reverse order.';
+      grid.style.gridTemplateColumns='repeat('+l.size+', minmax(0, 1fr))';grid.replaceChildren();
+      for(let i=0;i<l.size*l.size;i++){
+        const revealed=phase==='reveal' && l.tiles.includes(i);const selected=entered.includes(i);
+        const b=el('button',revealed ? String(l.tiles.indexOf(i)+1) : selected ? String(entered.indexOf(i)+1) : '·','tile'+(revealed||selected?' selected':''));
+        b.type='button';b.dataset.tile=i;b.setAttribute('aria-label','Tile '+(i+1)+(revealed?', position '+(l.tiles.indexOf(i)+1):''));b.disabled=phase!=='input'||selected;
+        b.onclick=()=>{entered.push(i);if(entered.length===l.tiles.length){phase=match(l,entered)?'success':'wrong';status.textContent=phase==='success'?'Nicely recalled!': 'Not quite. Reveal the pattern and try again.';}else status.textContent=entered.length+' / '+l.tiles.length+' tiles chosen';render();const available=Array.from(grid.querySelectorAll('button:not(:disabled)'));const target=phase==='input'?(available.find(tile=>Number(tile.dataset.tile)>i)||available[0]):action;if(target)target.focus();};grid.append(b);
+      }
+      action.textContent=phase==='ready'?'Show pattern':phase==='reveal'?'Hide & recall':phase==='input'?'Start again':phase==='wrong'?'Retry level':index===pack.levels.length-1?'Finish pack':'Next level';
+    }
+    action.onclick=()=>{
+      if(phase==='success' && index===pack.levels.length-1){phase='done';grid.replaceChildren();status.textContent='Pack complete. Well played!';action.textContent='Play again';return;}
+      if(phase==='done'){index=0;phase='ready';entered=[];status.textContent='Ready for another round.';}
+      else if(phase==='success'){index++;phase='ready';entered=[];status.textContent='Ready when you are.';}
+      else if(phase==='reveal'){phase='input';entered=[];status.textContent='Your turn. Choose '+pack.levels[index].tiles.length+' tiles.';}
+      else {phase='reveal';entered=[];status.textContent='Take your time. Hide the pattern when you are ready.';}
+      render();
+    };
+    status.textContent='Ready when you are.';render();
+    return ()=>host.replaceChildren();
+  })(document.getElementById("player"),JSON.parse(document.getElementById("pack-data").textContent),function matches(level, input) {
+    if (input.length !== level.tiles.length || new Set(input).size !== input.length) return false;
+    const expected = level.mode === 'reverse' ? level.tiles.slice().reverse() : level.tiles;
+    return level.mode === 'pattern' ? input.every(t => expected.includes(t)) : input.every((t,i) => t === expected[i]);
+  });</script></body></html>

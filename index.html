@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RecallKit · Memory activity studio</title><link rel="stylesheet" href="style.css"><script defer src="core.js"></script><script defer src="app.js"></script></head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">▦</span> RecallKit <span class="badge">PROTOTYPE</span></a><span class="local-note">● Offline by design</span></header>
+<main class="workspace">
+  <section class="intro"><p class="eyebrow">A LITTLE PATTERN. A MOMENT OF FOCUS.</p><h1>Make something memorable.</h1><p>Turn a few tiles into a memory activity. Build your levels, try them out, and share one playable file.</p></section>
+  <div class="toolbar"><div><label for="pack-title">Pack title</label><input id="pack-title" maxlength="80" value="Small moments" autocomplete="off"></div><div class="toolbar-actions"><button id="import-button">Import JSON</button><input id="import-file" type="file" accept=".json,application/json" hidden><button id="export-json">Save JSON</button><button id="export-html" class="primary">Download playable HTML ↗</button></div></div>
+  <p id="message" class="message" role="status" aria-live="polite">Your work stays in this tab. Save JSON to keep an editable copy; unsaved changes can be lost.</p>
+  <div class="studio">
+    <aside class="levels-panel"><div class="panel-heading"><h2>Your levels</h2><span id="level-count" class="count"></span></div><nav id="level-list" aria-label="Levels"></nav><button id="add-level" class="add-button">+ Add level</button><p class="small">A small beginning goes a long way.<br>Up to 50 levels per pack.</p></aside>
+    <section class="editor-panel" aria-labelledby="editor-heading"><div class="panel-heading"><div><p class="eyebrow">DESIGN A LEVEL</p><h2 id="editor-heading">Choose your tiles</h2></div><button id="delete-level" class="quiet">Delete level</button></div>
+      <label for="level-name">Level name</label><input id="level-name" maxlength="80" autocomplete="off">
+      <div class="field-row"><div><label for="grid-size">Grid size</label><select id="grid-size"><option value="2">2 × 2</option><option value="3">3 × 3</option><option value="4">4 × 4</option><option value="5">5 × 5</option><option value="6">6 × 6</option></select></div><div><label for="mode">Recall mode</label><select id="mode"><option value="pattern">Pattern · any order</option><option value="sequence">Sequence · same order</option><option value="reverse">Reverse · backwards</option></select></div></div>
+      <p id="mode-help" class="small"></p><div id="editor-grid" class="editor-grid" aria-label="Choose tiles in order"></div><div class="grid-footer"><span id="tile-count"></span><button id="clear-tiles" class="quiet">Clear tiles</button></div><p class="small">Click tiles to add them. Click again to remove. Numbers show the reveal order.</p>
+    </section>
+    <section class="preview-panel" aria-labelledby="preview-heading"><div class="panel-heading"><div><p class="eyebrow">PLAY IT BACK</p><h2 id="preview-heading">A player’s view</h2></div><button id="preview-button">Restart preview</button></div><p class="small">Try the full pack here before you share it.</p><div id="preview" class="player"></div></section>
+  </div>
+  <footer><span>Made for curiosity. No account. No tracking.</span><span>JSON keeps your source · HTML shares the experience</span></footer>
+</main></body></html>
