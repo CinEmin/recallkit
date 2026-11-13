@@ -1,4 +1,8 @@
-# RecallKit — local prototype
+# RecallKit — offline authoring prototype
+
+[Download the free prototype](https://github.com/CinEmin/recallkit/releases/tag/v0.1.0-prototype) · [Report a playtest](https://github.com/CinEmin/recallkit/issues/new?template=playtest.yml)
+
+![RecallKit editor showing two custom levels and a playable preview](assets/editor-preview.png)
 
 A dependency-free visual editor for small memory-pattern activities. No network, account, analytics, payments, storage requirement, or efficacy claims. Product name is provisional. Paid demand has not been validated.
 
@@ -28,3 +32,7 @@ Download the ZIP from [Releases](https://github.com/CinEmin/recallkit/releases),
 If you choose to give feedback, [open a playtest report](https://github.com/CinEmin/recallkit/issues/new?template=playtest.yml). Reports are public: do not include personal information, credentials, proprietary content or private files. Tell us whether you completed the task without assistance, where you got stuck, and which tool you would otherwise use. Download counts are not measured usability or purchase intent.
 
 Code and interface text were created with AI assistance. No third-party code, images or audio assets are bundled. The prototype has no checkout, subscription or promised future feature set.
+
+## Who this experiment is for
+
+Independent creators who want to make a short, custom memory-pattern activity without changing source code. Create a grid, pick tiles in order, choose the recall rule, then export a file someone else can open. It does not generate a full game campaign, collect player results or sync across devices. This experiment tests whether that small authoring workflow is useful.
