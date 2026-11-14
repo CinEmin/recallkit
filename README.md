@@ -29,6 +29,10 @@ Verified in Microsoft Edge on Windows at1440px and390px: authoring, JSON roundtr
 
 [Download the standalone example HTML](https://github.com/CinEmin/recallkit/releases/download/v0.1.0-prototype/recallkit-example.html), then open the downloaded file in your browser. No ZIP extraction or editor setup is needed. It contains three short activities: pattern, sequence and reverse recall. This is a player sample, not the editor; download the prototype ZIP below to create your own levels. The browser may download the HTML rather than display it immediately.
 
+## Open the editor without extracting a ZIP
+
+[Download the single-file editor](https://github.com/CinEmin/recallkit/releases/download/v0.1.0-prototype/recallkit-editor.html) and open the downloaded HTML in your browser. It includes the same editor code and styles; no companion files are needed. Save JSON before closing or reloading. This alternative was tested offline in Edge on Windows, including JSON import/export and playable HTML export. The ZIP remains available below for source files and examples.
+
 ## Try the prototype
 
 Download the ZIP from [Releases](https://github.com/CinEmin/recallkit/releases), extract it, and open `index.html`. Create two levels of your own, save the JSON, export playable HTML, then open the exported file in another browser tab. The `samples` folder contains an example editable pack and its standalone player.
