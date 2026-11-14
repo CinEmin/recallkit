@@ -25,6 +25,10 @@ Core API: `RecallKit.normalize(pack)`, `parse(jsonText)`, `matches(level, indice
 
 Verified in Microsoft Edge on Windows at1440px and390px: authoring, JSON roundtrip, failed import preservation, standalone offline play/retry, inert script-like titles and no HTTP(S) requests. Other browsers, physical touch devices and target-customer usability are not yet verified. This is a free evaluation prototype, not a finished paid product or a proven business.
 
+## Try a finished example first
+
+[Download the standalone example HTML](https://github.com/CinEmin/recallkit/releases/download/v0.1.0-prototype/recallkit-example.html), then open the downloaded file in your browser. No ZIP extraction or editor setup is needed. It contains three short activities: pattern, sequence and reverse recall. This is a player sample, not the editor; download the prototype ZIP below to create your own levels. The browser may download the HTML rather than display it immediately.
+
 ## Try the prototype
 
 Download the ZIP from [Releases](https://github.com/CinEmin/recallkit/releases), extract it, and open `index.html`. Create two levels of your own, save the JSON, export playable HTML, then open the exported file in another browser tab. The `samples` folder contains an example editable pack and its standalone player.
