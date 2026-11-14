@@ -1,6 +1,6 @@
 # RecallKit — offline authoring prototype
 
-[Download the free prototype](https://github.com/CinEmin/recallkit/releases/tag/v0.1.0-prototype) · [Report a playtest](https://github.com/CinEmin/recallkit/issues/new?template=playtest.yml)
+[Download free on itch.io](https://cinemin.itch.io/recallkit) · [GitHub release mirror](https://github.com/CinEmin/recallkit/releases/tag/v0.1.0-prototype) · [Report a playtest](https://github.com/CinEmin/recallkit/issues/new?template=playtest.yml)
 
 ![RecallKit editor showing two custom levels and a playable preview](assets/editor-preview.png)
 
@@ -27,9 +27,11 @@ Verified in Microsoft Edge on Windows at1440px and390px: authoring, JSON roundtr
 
 ## Try a finished example first
 
-[Download the standalone example HTML](https://github.com/CinEmin/recallkit/releases/download/v0.1.0-prototype/recallkit-example.html), then open the downloaded file in your browser. No ZIP extraction or editor setup is needed. It contains three short activities: pattern, sequence and reverse recall. This is a player sample, not the editor; download the prototype ZIP below to create your own levels. The browser may download the HTML rather than display it immediately.
+[Download the standalone example HTML](https://github.com/CinEmin/recallkit/releases/download/v0.1.0-prototype/recallkit-example.html), then open the downloaded file in your browser. No ZIP extraction or editor setup is needed. It contains three short activities: pattern, sequence and reverse recall. This is a player sample, not the editor; use the single-file editor below to create your own levels. The browser may download the HTML rather than display it immediately.
 
 ## Open the editor without extracting a ZIP
+
+The [itch.io download page](https://cinemin.itch.io/recallkit) offers the editor, playable example and source ZIP free, with no payment or donation step. Choose `recallkit-editor.html` to start creating.
 
 [Download the single-file editor](https://github.com/CinEmin/recallkit/releases/download/v0.1.0-prototype/recallkit-editor.html) and open the downloaded HTML in your browser. It includes the same editor code and styles; no companion files are needed. Save JSON before closing or reloading. This alternative was tested offline in Edge on Windows, including JSON import/export and playable HTML export. The ZIP remains available below for source files and examples.
 
