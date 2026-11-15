@@ -6,7 +6,9 @@ Make three small levels, keep an editable copy, and export one HTML file for som
 
 ## Open the editor
 
-Download `recallkit-editor.html` from the [same itch.io page](https://cinemin.itch.io/recallkit), then open it in a modern browser. The downloaded editor works offline. Edge on Windows is the tested environment; physical mobile devices and other browsers are not verified.
+[Open the editor directly in your browser](https://cinemin.github.io/recallkit/) to start without extracting or downloading the editor. GitHub Pages serves the app; the editor does not upload your activity or include analytics. Work stays in this tab, so save JSON and verify the downloaded file before closing or reloading.
+
+For offline authoring, download `recallkit-editor.html` from the [itch.io page](https://cinemin.itch.io/recallkit), then open it in a modern browser. The downloaded editor works offline. Edge on Windows is the tested environment; physical mobile devices and other browsers are not verified.
 
 If you prefer the source ZIP, extract it, keep the files together and open `index.html`. The ZIP includes `samples/example.json`, which you can import to inspect the finished editable pack. Save your existing work before importing another pack.
 
