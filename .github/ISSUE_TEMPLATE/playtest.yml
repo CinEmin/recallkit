@@ -10,6 +10,7 @@ body:
     attributes:
       label: Task outcome
       options:
+        - Outcome not reported (choose the result that actually happened)
         - Completed without assistance
         - Completed with assistance
         - Could not complete
