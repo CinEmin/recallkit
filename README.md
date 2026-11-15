@@ -4,6 +4,15 @@
 
 ![RecallKit editor showing two custom levels and a playable preview](assets/editor-preview.png)
 
+<details>
+<summary>Watch the 22-second authoring walkthrough</summary>
+
+![Actual editor steps: choose tiles, add a reverse level, save JSON, export HTML, and play the exported file](assets/authoring-demo.gif)
+
+An edited sequence of actual prototype screenshots, not real-time task duration. Two levels are created; the exported player is opened offline. [Read the step-by-step guide](docs/create-memory-activity.md) for a text alternative.
+
+</details>
+
 A dependency-free visual editor for small memory-pattern activities. No network, account, analytics, payments, storage requirement, or efficacy claims. Product name is provisional. Paid demand has not been validated.
 
 Open `index.html` directly in a modern browser. All editor files must stay together. Alternatively serve this directory locally with `python -m http.server 8766 --bind 127.0.0.1` and open `http://127.0.0.1:8766/`.
