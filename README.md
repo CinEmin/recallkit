@@ -1,6 +1,6 @@
 # RecallKit — offline authoring prototype
 
-[Download free on itch.io](https://cinemin.itch.io/recallkit) · [GitHub release mirror](https://github.com/CinEmin/recallkit/releases/tag/v0.1.0-prototype) · [Report a playtest](https://github.com/CinEmin/recallkit/issues/new?template=playtest.yml)
+[Download free on itch.io](https://cinemin.itch.io/recallkit) · [GitHub release mirror](https://github.com/CinEmin/recallkit/releases/tag/v0.1.1-prototype) · [Report a playtest](https://github.com/CinEmin/recallkit/issues/new?template=playtest.yml)
 
 ![RecallKit editor showing two custom levels and a playable preview](assets/editor-preview.png)
 
@@ -21,7 +21,7 @@ Open `index.html` directly in a modern browser. All editor files must stay toget
 2. Choose a 2–6 square grid and pattern, sequence, or reverse recall mode.
 3. Click tiles to add them in order. Click selected tiles to remove them. Reducing grid size drops indices outside the new grid.
 4. Preview the pack: **Show pattern**, study it, then **Hide & recall**. Reveal time is deliberately self-paced. A wrong response allows unlimited retries.
-5. **Save JSON** downloads the editable source. Work is held only in this tab; closing or reloading can lose unsaved work. **Import JSON** replaces the current pack only when validation succeeds.
+5. **Save JSON** downloads the editable source. After edits, the close-tab warning remains even after requesting a download: the browser does not confirm to this page that a file was saved. Check your downloaded file before leaving. Work is held only in this tab; closing or reloading can lose unsaved work. **Import JSON** replaces the current pack only when validation succeeds.
 6. **Download playable HTML** creates one standalone file, including styles, data, and player. Open or share that file; it needs no companion assets or connection. Keep JSON separately for editing.
 
 JSON schema: `{ "version": 1, "title": "My pack", "levels": [{ "name": "First", "size": 3, "mode": "sequence", "tiles": [0,4,8] }] }`. Tile indices are zero-based, row-major, ordered and unique. Titles/names must contain 1–80 characters, with non-whitespace content. 1–50 levels; each needs at least one tile. Imports are limited to 64 KiB UTF-8; unknown fields are discarded. Invalid imports preserve the current pack. Edits reset preview immediately; there are no delayed reveal callbacks.
@@ -38,13 +38,13 @@ Verified in Microsoft Edge on Windows at1440px and390px: authoring, JSON roundtr
 
 [Play the three-activity sample in your browser](https://cinemin.itch.io/recallkit) with **Run tool**, then follow the [step-by-step authoring guide](docs/create-memory-activity.md) to recreate it in the offline editor. The embedded sample does not edit packs.
 
-[Download the standalone example HTML](https://github.com/CinEmin/recallkit/releases/download/v0.1.0-prototype/recallkit-example.html), then open the downloaded file in your browser. No ZIP extraction or editor setup is needed. It contains three short activities: pattern, sequence and reverse recall. This is a player sample, not the editor; use the single-file editor below to create your own levels. The browser may download the HTML rather than display it immediately.
+[Download the standalone example HTML](https://github.com/CinEmin/recallkit/releases/download/v0.1.1-prototype/recallkit-example.html), then open the downloaded file in your browser. No ZIP extraction or editor setup is needed. It contains three short activities: pattern, sequence and reverse recall. This is a player sample, not the editor; use the single-file editor below to create your own levels. The browser may download the HTML rather than display it immediately.
 
 ## Open the editor without extracting a ZIP
 
 The [itch.io download page](https://cinemin.itch.io/recallkit) offers the editor, playable example and source ZIP free, with no payment or donation step. Choose `recallkit-editor.html` to start creating.
 
-[Download the single-file editor](https://github.com/CinEmin/recallkit/releases/download/v0.1.0-prototype/recallkit-editor.html) and open the downloaded HTML in your browser. It includes the same editor code and styles; no companion files are needed. Save JSON before closing or reloading. This alternative was tested offline in Edge on Windows, including JSON import/export and playable HTML export. The ZIP remains available below for source files and examples.
+[Download the single-file editor](https://github.com/CinEmin/recallkit/releases/download/v0.1.1-prototype/recallkit-editor.html) and open the downloaded HTML in your browser. It includes the same editor code and styles; no companion files are needed. Save JSON before closing or reloading. This alternative was tested offline in Edge on Windows, including JSON import/export and playable HTML export. The ZIP remains available below for source files and examples.
 
 ## Try the prototype
 
