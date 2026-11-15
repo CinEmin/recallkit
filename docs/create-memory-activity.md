@@ -44,6 +44,15 @@ The reveal is self-paced. A wrong answer can be retried; no timer or payment is 
 
 The editor does not autosave. Keep JSON before closing or reloading. An on-screen download message is not proof that the browser saved the file: check your downloads. If your browser blocks a download, keep the editor tab open and resolve its download prompt before leaving.
 
+## If you bundle several files into a ZIP
+
+A playable RecallKit HTML file works by itself; a ZIP is optional. When sharing HTML together with editable JSON and instructions:
+
+1. Put only the intended files in a new delivery folder. Keep private notes and unrelated exports out.
+2. Add a short README telling recipients which HTML to open and whether the JSON is included for editing. Retain the runtime license notice already embedded in the HTML.
+3. Create the ZIP, open a fresh copy of its contents, and play the exported activity. A valid ZIP alone does not prove that the activity works.
+4. If you already use Python, the separate free [Delivery Preflight prototype](https://cinemin.itch.io/delivery-preflight) can check required files, packaging clutter and ZIP integrity locally. It requires Python 3.10+ and does not upload archive contents. It is optional, is not malware scanning, and has its own terms; RecallKit's MIT license does not apply to that tool.
+
 ## What stays local
 
 The downloaded editor and exported player do not send analytics or player results. They do not sync devices, collect scores or import LoopLab progress. The itch.io hosting page uses its own platform services; it is separate from the offline files.

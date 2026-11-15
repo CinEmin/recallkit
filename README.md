@@ -61,6 +61,10 @@ Code and interface text were created with AI assistance. No third-party code, im
 Independent creators who want to make a short, custom memory-pattern activity without changing source code. Create a grid, pick tiles in order, choose the recall rule, then export a file someone else can open. It does not generate a full game campaign, collect player results or sync across devices. This experiment tests whether that small authoring workflow is useful.
 
 
+## Sharing a bundle of files?
+
+The [optional delivery checklist](docs/create-memory-activity.md#if-you-bundle-several-files-into-a-zip) covers packaging HTML, editable JSON and instructions together. RecallKit itself still needs only a browser.
+
 ## Prefer to play a ready-made activity?
 
 [LoopLab Memory Journey](https://looplab-pilot.racing-thyme-8277.chatgpt.site/) offers 15 untimed levels directly in a browser, with free hints and retries. It is a separate game, not a viewer for RecallKit files. LoopLab has optional consent-based analytics; RecallKit's offline editor and exports have none. [LoopLab source and details](https://github.com/CinEmin/looplab).
