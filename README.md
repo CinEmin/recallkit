@@ -1,6 +1,6 @@
 # RecallKit — offline authoring prototype
 
-[Download free on itch.io](https://cinemin.itch.io/recallkit) · [GitHub release mirror](https://github.com/CinEmin/recallkit/releases/tag/v0.1.1-prototype) · [Report a playtest](https://github.com/CinEmin/recallkit/issues/new?template=playtest.yml)
+[Download free on itch.io](https://cinemin.itch.io/recallkit) · [GitHub release mirror](https://github.com/CinEmin/recallkit/releases/tag/v0.1.1-mit) · [Report a playtest](https://github.com/CinEmin/recallkit/issues/new?template=playtest.yml)
 
 ![RecallKit editor showing two custom levels and a playable preview](assets/editor-preview.png)
 
@@ -38,13 +38,13 @@ Verified in Microsoft Edge on Windows at1440px and390px: authoring, JSON roundtr
 
 [Play the three-activity sample in your browser](https://cinemin.itch.io/recallkit) with **Run tool**, then follow the [step-by-step authoring guide](docs/create-memory-activity.md) to recreate it in the offline editor. The embedded sample does not edit packs.
 
-[Download the standalone example HTML](https://github.com/CinEmin/recallkit/releases/download/v0.1.1-prototype/recallkit-example.html), then open the downloaded file in your browser. No ZIP extraction or editor setup is needed. It contains three short activities: pattern, sequence and reverse recall. This is a player sample, not the editor; use the single-file editor below to create your own levels. The browser may download the HTML rather than display it immediately.
+[Download the standalone example HTML](https://github.com/CinEmin/recallkit/releases/download/v0.1.1-mit/recallkit-example.html), then open the downloaded file in your browser. No ZIP extraction or editor setup is needed. It contains three short activities: pattern, sequence and reverse recall. This is a player sample, not the editor; use the single-file editor below to create your own levels. The browser may download the HTML rather than display it immediately.
 
 ## Open the editor without extracting a ZIP
 
 The [itch.io download page](https://cinemin.itch.io/recallkit) offers the editor, playable example and source ZIP free, with no payment or donation step. Choose `recallkit-editor.html` to start creating.
 
-[Download the single-file editor](https://github.com/CinEmin/recallkit/releases/download/v0.1.1-prototype/recallkit-editor.html) and open the downloaded HTML in your browser. It includes the same editor code and styles; no companion files are needed. Save JSON before closing or reloading. This alternative was tested offline in Edge on Windows, including JSON import/export and playable HTML export. The ZIP remains available below for source files and examples.
+[Download the single-file editor](https://github.com/CinEmin/recallkit/releases/download/v0.1.1-mit/recallkit-editor.html) and open the downloaded HTML in your browser. It includes the same editor code and styles; no companion files are needed. Save JSON before closing or reloading. This alternative was tested offline in Edge on Windows, including JSON import/export and playable HTML export. The ZIP remains available below for source files and examples.
 
 ## Try the prototype
 
@@ -62,3 +62,8 @@ Independent creators who want to make a short, custom memory-pattern activity wi
 ## Prefer to play a ready-made activity?
 
 [LoopLab Memory Journey](https://looplab-pilot.racing-thyme-8277.chatgpt.site/) offers 15 untimed levels directly in a browser, with free hints and retries. It is a separate game, not a viewer for RecallKit files. LoopLab has optional consent-based analytics; RecallKit's offline editor and exports have none. [LoopLab source and details](https://github.com/CinEmin/looplab).
+
+
+## License for this prototype
+
+This published RecallKit 0.1.1 prototype is available under the [MIT License](LICENSE), including its editor, bundled player runtime, documentation and examples. You may use, modify, share and sell copies under those terms; retain the license notice. The standalone editor and newly exported players carry the notice inside their HTML. This does not license your own activity text or other content to us. It does not apply to LoopLab or automatically license unreleased future products.
