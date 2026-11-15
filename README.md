@@ -1,5 +1,7 @@
 # RecallKit — offline authoring prototype
 
+[Open the editor in your browser](https://cinemin.github.io/recallkit/) — no ZIP extraction. Hosted by GitHub Pages; the editor does not upload your activity or include analytics. Work stays in the tab: download JSON and check your saved file before closing. Offline downloads remain available below.
+
 [Download free on itch.io](https://cinemin.itch.io/recallkit) · [GitHub release mirror](https://github.com/CinEmin/recallkit/releases/tag/v0.1.1-mit) · [Report a playtest](https://github.com/CinEmin/recallkit/issues/new?template=playtest.yml)
 
 ![RecallKit editor showing two custom levels and a playable preview](assets/editor-preview.png)
