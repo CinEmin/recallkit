@@ -36,6 +36,8 @@ Verified in Microsoft Edge on Windows at1440px and390px: authoring, JSON roundtr
 
 ## Try a finished example first
 
+Running the sample with a group? Use the [facilitator guide](docs/facilitator-guide.md) for self-paced instructions, local-device setup and adapting the editable pack.
+
 [Play the three-activity sample in your browser](https://cinemin.itch.io/recallkit) with **Run tool**, then follow the [step-by-step authoring guide](docs/create-memory-activity.md) to recreate it in the offline editor. The embedded sample does not edit packs.
 
 [Download the standalone example HTML](https://github.com/CinEmin/recallkit/releases/download/v0.1.1-mit/recallkit-example.html), then open the downloaded file in your browser. No ZIP extraction or editor setup is needed. It contains three short activities: pattern, sequence and reverse recall. This is a player sample, not the editor; use the single-file editor below to create your own levels. The browser may download the HTML rather than display it immediately.
