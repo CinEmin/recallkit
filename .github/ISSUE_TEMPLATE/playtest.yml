@@ -13,17 +13,31 @@ body:
         - Completed without assistance
         - Completed with assistance
         - Could not complete
+        - Did not attempt the authoring task (sample only or general feedback)
     validations:
       required: true
   - type: textarea
     id: friction
     attributes:
-      label: Where did you get stuck?
-      description: Include browser and approximate time if you want. No personal data needed.
-    validations:
-      required: true
+      label: Friction, if any
+      description: Leave blank if nothing blocked you. Browser and approximate time are optional; no personal data needed.
   - type: textarea
     id: alternative
     attributes:
       label: What would you otherwise use?
       description: Describe the activity you wanted to create and your current alternative. Do not share client or confidential content.
+  - type: dropdown
+    id: actual_use
+    attributes:
+      label: Have you used your exported activity beyond this test?
+      description: Select what already happened, not what you might do later.
+      options:
+        - Not yet
+        - Used it myself for an actual activity
+        - Shared it for someone else to use
+        - Prefer not to answer
+  - type: textarea
+    id: recent_workflow
+    attributes:
+      label: A recent real activity-making task (optional)
+      description: What did you make most recently, which tool did you actually use, and what took effort? If you have not done this before, say so. Omit names, client details and private files. This is not a purchase commitment.
